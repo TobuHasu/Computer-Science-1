@@ -67,6 +67,6 @@ public class ChicagoBikeShare{
    
    //toString
    public String toString(){
-      return 
+      return "Latitude: " + latitude + "Longitude: " + longitude + "Available docks: " + availableDocks + "Available bikes: " + availableBikes + "Total docks: " + totalDocks + "Test Station: " + testStation;
    }
 }
