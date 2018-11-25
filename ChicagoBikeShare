@@ -1,0 +1,17 @@
+public class ChicagoBikeShare{
+   
+   //Fields
+   private double latitude, longitude;
+   private int availableDocks, availableBikes, totalDocks;
+   private boolean testStation;
+   
+   //Default constructor
+   public ChicagoBikeShare(){
+      latitude = 0.0;
+      longitude = 0.0;
+      availableDocks = 0;
+      availableBikes = 0;
+      totalDocks = 0;
+      testStation = false;
+   }
+}
