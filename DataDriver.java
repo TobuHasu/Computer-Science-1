@@ -16,6 +16,11 @@ public class DataDriver{
       testSource();
    }
    
+   public static ChicagoBikeShare[] fetchAll(){
+      ChicagoBikeShare[] bikeShare = ds.fetchArray("ChicagoBikeShare", "latitude", "longitude", "availableDocks", "availableBikes", "totalDocks", "testStation");
+      return bikeShare;
+   }
+   
    //display the JSON structure for available data
    public static void testSource(){
       ds.printUsageString();
