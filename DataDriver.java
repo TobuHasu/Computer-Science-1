@@ -25,6 +25,7 @@ public class DataDriver{
          testCount++;
       }
    }
+}
    
    public static ChicagoBikeShare[] fetchAll(){
       ChicagoBikeShare[] bikeShare = ds.fetchArray("ChicagoBikeShare", "latitude", "longitude", "id", "availableDocks", "availableBikes", "totalDocks", "testStation");
