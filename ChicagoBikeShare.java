@@ -2,27 +2,26 @@ public class ChicagoBikeShare{
    
    //Fields
    private double latitude, longitude;
-   private int availableDocks, availableBikes, totalDocks;
-   private boolean testStation;
+   private int id, availableDocks, availableBikes, totalDocks;
    
    //Default constructor
    public ChicagoBikeShare(){
       latitude = 0.0;
       longitude = 0.0;
+      id = 0;
       availableDocks = 0;
       availableBikes = 0;
       totalDocks = 0;
-      testStation = false;
    }
    
-    //Specified Constructor
-   public ChicagoBikeShare(double bLat, double bLong, int aDocks, int aBikes, int tDocks, boolean station){
+   //Specified Constructor
+   public ChicagoBikeShare(double bLat, double bLong, int sId, int aDocks, int aBikes, int tDocks){
       latitude = bLat;
       longitude = bLong;
+      id = sId;
       availableDocks = aDocks;
       availableBikes = aBikes;
       totalDocks = tDocks;
-      testStation = station;
    }
    
    //Accessors
@@ -31,6 +30,9 @@ public class ChicagoBikeShare{
    }
    public double getLongitude(){
       return longitude;
+   }
+   public int getId(){
+      return id;
    }
    public int getAvailableDocks(){
       return availableDocks;
@@ -41,9 +43,6 @@ public class ChicagoBikeShare{
    public int getTotalDocks(){
       return totalDocks;
    }
-   public boolean getTestStation(){
-      return testStation;
-   }
    
    //Mutators
    public void setLatitude(double bLat){
@@ -51,6 +50,9 @@ public class ChicagoBikeShare{
    }
    public void setLongitude(double bLong){
       longitude = bLong;
+   }
+   public void setId(int sId){
+      id = sId;
    }
    public void setAvailableDocks(int aDocks){
       availableDocks = aDocks;
@@ -61,12 +63,9 @@ public class ChicagoBikeShare{
    public void setTotalDocks(int tDocks){
       totalDocks = tDocks;
    }
-   public void setTestStation(boolean station){
-      testStation = station;
-   }
    
    //toString
    public String toString(){
-      return "Latitude: " + latitude + "Longitude: " + longitude + "Available docks: " + availableDocks + "Available bikes: " + availableBikes + "Total docks: " + totalDocks + "Test Station: " + testStation;
+      return "Latitude: " + latitude + "Longitude: " + longitude + "Station ID: " + id + "Available docks: " + availableDocks + "Available bikes: " + availableBikes + "Total docks: " + totalDocks;
    }
 }
