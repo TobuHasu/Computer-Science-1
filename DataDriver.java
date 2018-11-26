@@ -19,7 +19,7 @@ public class DataDriver{
    }
    
    public static ChicagoBikeShare[] fetchAll(){
-      ChicagoBikeShare[] bikeShare = ds.fetchArray("ChicagoBikeShare", "latitude", "longitude", "id", "availableDocks", "availableBikes", "totalDocks", "testStation");
+      ChicagoBikeShare[] bikeShare = ds.fetchArray("ChicagoBikeShare", "stationBeanList/latitude", "stationBeanList/longitude", "stationBeanList/id", "stationBeanList/availableDocks", "stationBeanList/availableBikes", "stationBeanList/totalDocks", "stationBeanList/testStation");
       return bikeShare;
    }
    //display the JSON structure for available data
