@@ -35,8 +35,13 @@ public class DataDriver{
       System.out.print("Please enter a station id number from 2 to 663: ");
       int idNum = kb.nextInt();
       for(int num = 0; num < idNum; num++){
-         if(idNum <= 663 && idNum >= 2){
-            System.out.println();
+            if(idNum >= 2 && idNum <= 663 && idNum == bikeShare[num].getId() ){
+            System.out.println("Latitude: " + bikeShare[num].getLatitude());
+            System.out.println("Longitude: " + bikeShare[num].getLongitude());
+         }
+         else{
+            System.out.println("Oops! Please enter a station id number from 2 to 663: ");
+            idNum = kb.nextInt();
          }
       }  
    }
